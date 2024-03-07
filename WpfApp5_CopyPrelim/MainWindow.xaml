@@ -15,11 +15,11 @@
         <TextBox x:Name="tb2" HorizontalAlignment="Left" Height="51" Margin="616,203,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50" FontSize="36" TextAlignment="Center" IsEnabled="False"/>
         <Button x:Name="btn1" Content="Button" HorizontalAlignment="Left" Margin="688,273,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btn1_Click"/>
         <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="51" Margin="688,203,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50" FontSize="36" TextAlignment="Center" IsEnabled="False"/>
-        <Button x:Name="btn128" Content="Button" HorizontalAlignment="Left" Margin="71,273,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
+        <Button x:Name="btn128" Content="Button" HorizontalAlignment="Left" Margin="71,273,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btn128_Click"/>
         <TextBox x:Name="tb128" HorizontalAlignment="Left" Height="51" Margin="71,203,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50" FontSize="36" TextAlignment="Center" IsEnabled="False"/>
-        <Button x:Name="btn64" Content="Button" HorizontalAlignment="Left" Margin="148,273,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
+        <Button x:Name="btn64" Content="Button" HorizontalAlignment="Left" Margin="148,273,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btn64_Click"/>
         <TextBox x:Name="tb64" HorizontalAlignment="Left" Height="51" Margin="148,203,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50" FontSize="36" TextAlignment="Center" IsEnabled="False"/>
-        <Button x:Name="btn32" Content="Button" HorizontalAlignment="Left" Margin="222,273,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
+        <Button x:Name="btn32" Content="Button" HorizontalAlignment="Left" Margin="222,273,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btn32_Click"/>
         <TextBox x:Name="tb32" HorizontalAlignment="Left" Height="51" Margin="222,203,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50" FontSize="36" TextAlignment="Center" IsEnabled="False"/>
         <Button x:Name="btn16" Content="Button" HorizontalAlignment="Left" Margin="294,273,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btn16_Click"/>
         <TextBox x:Name="tb16" HorizontalAlignment="Left" Height="51" Margin="294,203,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50" FontSize="36" TextAlignment="Center" IsEnabled="False"/>
@@ -31,7 +31,7 @@
         <TextBox HorizontalAlignment="Left" Height="40" Margin="222,142,0,0" TextWrapping="Wrap" Text="32" VerticalAlignment="Top" Width="50" FontSize="27" TextAlignment="Center" IsEnabled="False"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="148,142,0,0" TextWrapping="Wrap" Text="64" VerticalAlignment="Top" Width="50" FontSize="27" TextAlignment="Center" IsEnabled="False"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="71,142,0,0" TextWrapping="Wrap" Text="128" VerticalAlignment="Top" Width="50" FontSize="27" TextAlignment="Center" IsEnabled="False"/>
-        <TextBox x:Name="tbRandomNum" HorizontalAlignment="Left" Height="40" Margin="380,203,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" FontSize="27" TextAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="tbRandomNum" HorizontalAlignment="Left" Height="40" Margin="688,81,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" FontSize="27" TextAlignment="Center" IsEnabled="False"/>
         <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="350,342,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnStart_Click"/>
         <Button x:Name="btnFinish" Content="Finish" HorizontalAlignment="Left" Margin="405,342,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnFinish_Click"/>
         <Label x:Name="lblTimer" Content="30" HorizontalAlignment="Left" Margin="385,81,0,0" VerticalAlignment="Top" FontSize="27"/>

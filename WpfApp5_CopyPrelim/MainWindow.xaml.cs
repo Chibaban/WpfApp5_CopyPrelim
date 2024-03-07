@@ -30,6 +30,7 @@ namespace WpfApp5_CopyPrelim
         int _PlusNum64 = 0;
         int _PlusNum128 = 0;
         int _calc = 0;
+        int _sec = 0;
 
         bool _timerStatus = true;
         DispatcherTimer _dt = null;
@@ -40,25 +41,25 @@ namespace WpfApp5_CopyPrelim
             InitializeComponent();
             _dt = new DispatcherTimer();
             _dt.Tick += _dt_Tick;
-            _dt.Interval = new TimeSpan(0,0,0,0,100);
-            btnFinish.IsEnabled = true;
+            _dt.Interval = new TimeSpan(0,0,0,0,1000);
+            btnFinish.IsEnabled = false;
         }
 
         private void _dt_Tick(object sender, EventArgs e)
         {
-            int sec = int.Parse(lblTimer.Content.ToString());
-            sec--;
+            _sec = int.Parse(lblTimer.Content.ToString());
+            _sec--;
 
-            if (sec == 0)
+            if (_sec == 0)
             {
                 _dt.Stop();
                 MessageBox.Show("Times up!");
                 btnStart.IsEnabled = true;
                 btnFinish.IsEnabled = false;
-                sec = 30;
+                _sec = 30;
             }
 
-            lblTimer.Content = sec.ToString();
+            lblTimer.Content = _sec.ToString();
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
@@ -66,6 +67,9 @@ namespace WpfApp5_CopyPrelim
             btnStart.IsEnabled = false;
             btnFinish.IsEnabled = true;
             _dt.Start();
+
+            int rnd = _rnd.Next(0, 256);
+            tbRandomNum.Text = rnd.ToString();
         }
 
         private void btnFinish_Click(object sender, RoutedEventArgs e)
@@ -75,13 +79,34 @@ namespace WpfApp5_CopyPrelim
             int btn4 = _PlusNum4;
             int btn8 = _PlusNum8;
             int btn16 = _PlusNum16;
-            int result = btn1 + btn2 + btn4 + btn8 + btn16;
+            int btn32 = _PlusNum32;
+            int btn64 = _PlusNum64;
+            int btn128 = _PlusNum128;
+            int result = btn1 + btn2 + btn4 + btn8 + btn16 + btn32 + btn64 + btn128;
+            
+            if (result.ToString() == tbRandomNum.Text)
+            {
+                _dt.Stop();
+                MessageBox.Show("TAMA");
+                btnStart.IsEnabled = true;
+                btnFinish.IsEnabled = false;
+                _sec = 30;
+                lblTimer.Content = _sec.ToString();
 
-            MessageBox.Show(result.ToString());
-        }
-
-        private void RandomNum_TextChanged(object sender, TextChangedEventArgs e)
-        {
+                tb1.Text = "0";
+                tb2.Text = "0";
+                tb4.Text = "0";
+                tb8.Text = "0";
+                tb16.Text = "0";
+                tb32.Text = "0";
+                tb64.Text = "0";
+                tb128.Text = "0";
+                tbRandomNum.Text = "x";
+            }
+            else
+            {
+                MessageBox.Show("MALI");
+            }
             
         }
 
@@ -152,6 +177,48 @@ namespace WpfApp5_CopyPrelim
             {
                 tb16.Text = "0";
                 _PlusNum16 = 0;
+            }
+        }
+
+        private void btn32_Click(object sender, RoutedEventArgs e)
+        {
+            if (tb32.Text == "0")
+            {
+                tb32.Text = "1";
+                _PlusNum32 = 32;
+            }
+            else
+            {
+                tb32.Text = "0";
+                _PlusNum32 = 0;
+            }
+        }
+
+        private void btn64_Click(object sender, RoutedEventArgs e)
+        {
+            if (tb64.Text == "0")
+            {
+                tb64.Text = "1";
+                _PlusNum64 = 64;
+            }
+            else
+            {
+                tb64.Text = "0";
+                _PlusNum64 = 0;
+            }
+        }
+
+        private void btn128_Click(object sender, RoutedEventArgs e)
+        {
+            if (tb128.Text == "0")
+            {
+                tb128.Text = "1";
+                _PlusNum128 = 128;
+            }
+            else
+            {
+                tb128.Text = "0";
+                _PlusNum128 = 0;
             }
         }
     }
